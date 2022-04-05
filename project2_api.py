@@ -17,7 +17,7 @@ class all_messages(Resource):
 api.add_resource(all_messages, "/messages")
 
 # based on GFG implementation of storing items into MongoDB. Will proceed to create REstful API successful implementation. 
-'''
+
 with open('chat_message') as message:
     chat_message = json.load(message)
 
@@ -32,4 +32,4 @@ if isinstance(chat_message, list):
 else:
     chat_client.insert_one(chat_message) 
 
-    '''
+  
