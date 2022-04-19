@@ -20,6 +20,3 @@ Creating the chat module requires two phases for completion. The first implement
 3. Convert the API to a REstful API. This will be done using Flask framework. 
 
 
-# Administrative (Admin) Module:
-
-The implementation of the admin module will involve three fields required for validation: Date of birth (DOB), Name, and Age. The goal with the admin module is to correctly load the specified administrative data (in the form of a JSON format for testing purposes), validate that it is in the correct format, and then store the information for retrieval inside MongoDB. 
