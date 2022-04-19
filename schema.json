@@ -1,0 +1,27 @@
+{  
+    "title": "Patient record information",
+    "description": "Patient information containing dob, name, and age",
+    "type": "object",
+    "properties": {
+        "dob": {
+            "description": "date of birth for patient",
+            "type": "number"
+        },
+        "name": {
+            "description": "full name of the patient",
+            "type": "string",
+            "minimum": 2
+        },
+        "age": {
+            "description": "age of the patient",
+            "type": "number",
+            "minimum": 0
+        }
+    },
+
+    "required": [
+        "dob",  
+        "name",
+        "age"
+    ]
+}
