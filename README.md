@@ -5,10 +5,10 @@ This repository contains the general functionality in which the program will int
 The minimum required are the fields: "Name" and "Age". Each module will specify what it is required for the program to correctly parse the information. 
 
 
-# Chat Module:
+# Core Module:
 
-Creating the chat module requires two phases for completion. The first implementation will be as follows:
+The core module is designed to make API calls to either the admin or user modules. The initial implementation of a UI will involve using tkinter to create a basic interface.
 
-1. Create a response to a received piece of data (in this case, receiving a message). 
-2. Take that data (initial format will be a json file for simplicity) and store the data into a "database" (we'll assume we linked a database but actual implementation will come at a later time). 
-3. Convert the API to a REstful API. This will be done using Flask framework. 
+For the API calls, the core module will have the user of the login interface to select whether they are an admin or a user. Based on the selection, the program will then call a function (admin_thread or user_thread) and spawn the corresponding the thread. There will be a check for the status code; if it is 404/not found, the thread should terminate. If not, then the thread should continue and execute the corresponding module. THe UI will redirect to another page based on this. 
+
+The Admin or User module will then proceed to make their own API calls (primarily chat, EHR access, etc.). 
